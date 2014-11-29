@@ -1,0 +1,7 @@
+parameters:
+#    bootcamp_admin.example.class: Bootcamp\AdminBundle\Example
+
+services:
+#    bootcamp_admin.example:
+#        class: %bootcamp_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
