@@ -20,6 +20,9 @@ class AppKernel extends Kernel
             new Bootcamp\JobeetBundle\BootcampJobeetBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Bootcamp\PanelBundle\BootcampPanelBundle(),
+            new Bootcamp\AdminBundle\BootcampAdminBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
