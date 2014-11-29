@@ -4,6 +4,8 @@ namespace Bootcamp\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use \Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+Use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Job
@@ -26,6 +28,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="campanyName", type="string", length=255)
+     * 
+     * @Assert\NotBlank(message="Proszę wprowadzić nazwę firmy")
      */
     private $campanyName;
 
@@ -33,6 +37,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=255)
+     * 
+     * @Gedmo\Slug(fields={"campanyName", "location"})
      */
     private $slug;
 
@@ -40,20 +46,22 @@ class Job
      * @var integer
      *
      * @ORM\Column(name="type", type="smallint")
+     * 
+     * @Assert\NotBlank()
      */
     private $type;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="logo", type="string", length=255)
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
      */
     private $logo;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="url", type="string", length=255)
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
      */
     private $url;
 
@@ -61,6 +69,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="position", type="string", length=255)
+     * 
+     * @Assert\NotBlank()
      */
     private $position;
 
@@ -68,6 +78,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="location", type="string", length=255)
+     * 
+     * @Assert\NotBlank()
      */
     private $location;
 
@@ -75,6 +87,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="description", type="text")
+     * 
+     * @Assert\NotBlank()
      */
     private $description;
 
@@ -82,6 +96,8 @@ class Job
      * @var string
      *
      * @ORM\Column(name="howToApply", type="string", length=255)
+     * 
+     * @Assert\NotBlank()
      */
     private $howToApply;
 
@@ -89,6 +105,9 @@ class Job
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * 
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
     
