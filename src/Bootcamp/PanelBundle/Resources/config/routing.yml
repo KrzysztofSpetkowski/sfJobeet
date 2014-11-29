@@ -1,0 +1,11 @@
+bootcamp_panel_homepage:
+    path:     /
+    defaults: { _controller: BootcampPanelBundle:Default:index }
+
+bootcamp_panel_list:
+    path:     /list
+    defaults: { _controller: BootcampPanelBundle:Job:list }
+
+bootcamp_panel_new:
+    path:     /new
+    defaults: { _controller: BootcampPanelBundle:Job:new }

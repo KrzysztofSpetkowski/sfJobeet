@@ -1,0 +1,7 @@
+parameters:
+#    bootcamp_panel.example.class: Bootcamp\PanelBundle\Example
+
+services:
+#    bootcamp_panel.example:
+#        class: %bootcamp_panel.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
