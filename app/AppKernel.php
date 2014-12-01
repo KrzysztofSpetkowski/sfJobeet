@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Bootcamp\PanelBundle\BootcampPanelBundle(),
             new Bootcamp\AdminBundle\BootcampAdminBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
