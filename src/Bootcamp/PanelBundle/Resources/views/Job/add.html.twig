@@ -1,0 +1,10 @@
+{% extends "BootcampLayoutBundle::layout.html.twig" %}
+
+{% block title %}BootcampPanelBundle:Job:add{% endblock %}
+
+{% block body %}
+<h1>Dodaj oferty pracy</h1>
+
+{{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+{% endblock %}

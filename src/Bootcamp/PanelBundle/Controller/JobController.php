@@ -8,16 +8,23 @@ use Bootcamp\JobeetBundle\Entity\Job;
 
 class JobController extends Controller
 {
-    public function listAction()
+    public function listAction($page)
     {
         $user = $this->getUser();
         $jobs = $this->getDoctrine()->getRepository('BootcampJobeetBundle:Job')
             ->findBy(array(
                'user'   => $user
             ));
+        
+        $paginator  = $this->get('knp_paginator');
+        $pages = $paginator->paginate(
+            $jobs,
+            $page,
+           5
+                );
                 
         return $this->render('BootcampPanelBundle:Job:list.html.twig', array(
-            'jobs'  => $jobs
+            'pages'  => $pages
         ));    
         
     }

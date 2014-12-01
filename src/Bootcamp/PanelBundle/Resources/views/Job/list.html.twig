@@ -1,6 +1,6 @@
 {% extends "BootcampLayoutBundle::layout.html.twig" %}
 
-{% block title %}BootcampPanelBundle:Job:list{% endblock %}
+{% block title %}Moje oferty{% endblock %}
 
 {% block body %}
 <h1>Moja lista ofert pracy</h1>
@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for job in jobs %}
+        {% for job in pages %}
             <tr>
               <td>{{ job.id }}</td>
               <td>{{ job.campanyName }}</td>
@@ -38,7 +38,10 @@
               <td colspan="4">Brak ofert pracy!</td>
             </tr>
         {% endfor %}
+        
+        
     </tbody>
 </table>
 
+         {{ knp_pagination_render(pages) }}
 {% endblock %}

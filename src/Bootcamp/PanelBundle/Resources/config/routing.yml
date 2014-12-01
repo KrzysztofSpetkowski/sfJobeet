@@ -4,8 +4,10 @@ bootcamp_panel_homepage:
 
 bootcamp_panel_list:
     path:     /list
-    defaults: { _controller: BootcampPanelBundle:Job:list }
-
+    defaults: { _controller: BootcampPanelBundle:Job:list, page: 1 }
+    requirements: { page: \d+ }
+   
 bootcamp_panel_new:
     path:     /new
     defaults: { _controller: BootcampPanelBundle:Job:new }
+    
