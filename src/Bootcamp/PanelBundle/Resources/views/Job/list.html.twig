@@ -1,9 +1,9 @@
 {% extends "BootcampLayoutBundle::layout.html.twig" %}
 
-{% block title %}Moje oferty{% endblock %}
+{% block title %}Oferty pracy{% endblock %}
 
 {% block body %}
-<h1>Moja lista ofert pracy</h1>
+<h1>Dodane oferty pracy:</h1>
 
 <a href="{{ path('bootcamp_panel_new') }}" class="btn btn-primary pull-right">Dodaj ofertę pracy</a>
 
@@ -29,7 +29,7 @@
               <td>{{ job.email }}</td>
               <td>
                   <a href="#" >Szczegóły</a> &nbsp;
-                  <a href="#" >Edytuj</a> &nbsp;
+                  <a href="{{ path('bootcamp_panel_edit', {'id': job.id}) }}">Edytuj</a></a> &nbsp;
                   <a href="#" >Usuń </a>
               </td>
             </tr>

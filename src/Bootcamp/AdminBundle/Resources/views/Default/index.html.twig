@@ -1,1 +1,8 @@
-admin dashboard
+{% extends "BootcampLayoutBundle::layout.html.twig" %}
+
+{% block body %}
+    <h1>Panel Administratora</h1>
+    
+    <a class="btn btn-default" href="{{ path('bootcamp_panel_list') }}">Dodane ogłoszenia</a>
+{% endblock %}
+

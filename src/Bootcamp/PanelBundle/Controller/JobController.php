@@ -58,5 +58,59 @@ class JobController extends Controller
            'form'   => $form->createView()
         ));
     }
+    
+    public function deleteAction($id)
+    {
+        $job = $this->getDoctrine()
+    		->getRepository('BootcampJobeetBundle:Job')
+    		->find($id);
+    	
+    	if (!$job) {
+    		$this->get('session')->getFlashBag()
+    		->add('notice', 'Brak ofert');
+    	    return $this->redirect($this->generateUrl('bootcamp_panel_list'));
+    	    
+    	}
+    	
+    	$em = $this->getDoctrine()->getManager();
+    	$em->remove($job);
+    	$em->flush();
+    	
+    	$this->get('session')->getFlashBag()
+    		->add('notice', 'Oferta została usunięta');
+    		
+        return $this->redirect($this->generateUrl('bootcamp_panel_list'));
+    }
+    public function editAction($id)
+    {
+    	$request = $this->getRequest();
+    	
+    	$job = $this->getDoctrine()
+    	->getRepository('BootcampJobeetBundle:Job')
+    	->find($id);
+    	 
+    	if (!$job) {
+    		$this->get('session')->getFlashBag()
+    		->add('notice', 'Brak ofert');
+    		return $this->redirect($this->generateUrl('bootcamp_panel_list'));
+    			
+    	}
+    	$form =$this->createForm(new JobType(), $job, []);
+    	$form->handleRequest($request);
+    	
+    	if($form->isValid()) {
+    		$product = $form->getData();
+    		$em = $this->getDoctrine()->getManager();
+    		$em->flush();
+    		$this->get('session')->getFlashBag()->add('notice', "Oferta zostala zmieniona");
+    		
+    		return $this->redirect($this->generateUrl('bootcamp_panel_list'));
+    	}
+    	
+    	
+        return $this->render('BootcampPanelBundle:Job:edit.html.twig', array(
+               'form' => $form->createView()
+            ));
+        }
 
 }

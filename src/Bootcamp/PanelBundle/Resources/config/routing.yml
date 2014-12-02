@@ -11,3 +11,7 @@ bootcamp_panel_new:
     path:     /new
     defaults: { _controller: BootcampPanelBundle:Job:new }
     
+bootcamp_panel_edit:
+    path:     /edit/{id}
+    defaults: { _controller: BootcampPanelBundle:Job:edit }
+    
