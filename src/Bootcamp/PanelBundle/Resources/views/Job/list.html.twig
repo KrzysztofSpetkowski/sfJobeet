@@ -30,7 +30,7 @@
               <td>
                   <a href="#" >Szczegóły</a> &nbsp;
                   <a href="{{ path('bootcamp_panel_edit', {'id': job.id}) }}">Edytuj</a></a> &nbsp;
-                  <a href="#" >Usuń </a>
+                  <a href="{{ path('bootcamp_panel_delete', {'id': job.id}) }}" >Usuń </a>
               </td>
             </tr>
         {% else %}
