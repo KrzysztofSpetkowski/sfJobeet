@@ -89,3 +89,14 @@ knp_paginator:
         page_name: page
     template:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig
+        
+vich_uploader:
+    db_driver: orm
+    mappings:
+        mems_image:
+            uri_prefix:         uploads/logo
+            upload_destination: %kernel.root_dir%/../web/uploads/logo
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid

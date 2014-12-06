@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use \Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 Use Gedmo\Mapping\Annotation as Gedmo;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Job
@@ -50,11 +51,12 @@ class Job
      * @Assert\NotBlank()
      */
     private $type;
-
-    /**
-     * @var string
+/**
+     * @Vich\UploadableField(mapping="logo_image", fileNameProperty="logo")
      *
-     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
+     * @var File $logo
+     * 
+     * @Assert\NotBlank()
      */
     private $logo;
 
