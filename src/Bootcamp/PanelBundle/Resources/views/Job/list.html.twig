@@ -28,7 +28,7 @@
               <td>{{ job.location }}</td>
               <td>{{ job.email }}</td>
               <td>
-                  <a href="#" >Szczegóły</a> &nbsp;
+                  <a href="{{ path('bootcamp_panel_details', {'id': job.id}) }}" >Szczegóły</a> &nbsp;
                   <a href="{{ path('bootcamp_panel_edit', {'id': job.id}) }}">Edytuj</a></a> &nbsp;
                   <a href="{{ path('bootcamp_panel_delete', {'id': job.id}) }}" >Usuń </a>
               </td>
