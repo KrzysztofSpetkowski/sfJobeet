@@ -95,7 +95,7 @@ class JobController extends Controller
     		return $this->redirect($this->generateUrl('bootcamp_panel_list'));
     			
     	}
-    	$form =$this->createForm(new JobType(), $job, []);
+    	$form =$this->createForm(new JobType(), $job );
     	$form->handleRequest($request);
     	
     	if($form->isValid()) {
@@ -119,14 +119,14 @@ class JobController extends Controller
     	$job = $this->getDoctrine()
     	->getRepository('BootcampJobeetBundle:Job')
     	->find($id);
-    	 
+    	
     	if (!$job) 
             {
         
     		$this->get('session')->getFlashBag()
     		->add('notice', 'Brak ofert');
             }
-    		return $this->redirect($this->generateUrl('bootcamp_panel_details'));
+    		return $this->redirect($this->generateUrl('bootcamp_panel_list'));
     			
     
     
@@ -136,7 +136,7 @@ class JobController extends Controller
     } 
 
     return $this->render('BootcampPanelBundle:Job:details.html.twig', array(
-              //'form' => $form->createView()
+              'form' => $form->createView()
             ));
  
     }

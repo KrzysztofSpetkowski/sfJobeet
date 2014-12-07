@@ -3,8 +3,13 @@
 {% block title %}BootcampPanelBundle:Job:details{% endblock %}
 
 {% block body %}
-<h1>Szczegóły oferty pracy</h1>
-
-{{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
-
+<h1>{{ block('title') }}</h1>
+  <div>
+  <p>{{ job.title }}</p>
+		
+			<p>{{ job.title }}</p>
+			
+			<img src="{{ asset('uploads/logo/') }}" alt ="{{ job.title }}">
+			<p>Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</p>
+</div>
 {% endblock %}

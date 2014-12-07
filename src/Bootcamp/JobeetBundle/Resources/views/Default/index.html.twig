@@ -1,6 +1,7 @@
 {% extends 'BootcampLayoutBundle::layout.html.twig' %}
 
 {% block body %}
+    
 
     <div class="row">
             <form class="navbar-form navbar-left" role="search">
@@ -10,40 +11,42 @@
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
           </div>
+   
+   
     
-          <!-- Example row of columns -->
-          <div class="row">
-            <div class="container">
-            <table class="table table-hover">
-      <thead>
+<table class="table table-hover">
+    <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Nazwa firma</th>
+          <th>Stanowisko</th>
+          <th>Lokalizacja</th>
+          <th>E-mail</th>
+          <th>Akcje</th>
         </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-          </div>
+    </thead>
+    <tbody>
+        {% for job in pages %}
+            <tr>
+              <td>{{ job.id }}</td>
+              <td>{{ job.campanyName }}</td>
+              <td>{{ job.position }}</td>
+              <td>{{ job.location }}</td>
+              <td>{{ job.email }}</td>
+              <td>
+                  <a href="{{ path('bootcamp_panel_details', {'id': job.id}) }}" >Szczegóły</a> &nbsp;
+                                </td>
+            </tr>
+        {% else %}
+            <tr>
+              <td colspan="4">Brak ofert pracy!</td>
+            </tr>
+        {% endfor %}
+        
+        
+    </tbody>
+</table>
+
+ 
 
 {% endblock %}
