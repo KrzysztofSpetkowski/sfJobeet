@@ -24,6 +24,14 @@ class Job
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+    
+     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime")
+     * @Assert\NotBlank()
+     */
+    private $createdAt;
 
     /**
      * @var string
@@ -56,7 +64,6 @@ class Job
      *
      * @var File $logo
      * 
-     * @Assert\NotBlank()
      */
     private $logo;
 
@@ -124,6 +131,13 @@ class Job
      * @var ArrayCollection 
      */
     protected $categories;
+    
+     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_accepted", type="boolean")
+     */
+    private $isAccepted = false;
     
     public function __construct() 
     {
@@ -424,5 +438,51 @@ class Job
     public function getCategories()
     {
         return $this->categories;
+    }
+    
+    /**
+     * Set isAccepted
+     *
+     * @param boolean $isAccepted
+     * @return Jobs
+     */
+    public function setIsAccepted($isAccepted)
+    {
+        $this->isAccepted = $isAccepted;
+
+        return $this;
+    }
+
+    /**
+     * Get isAccepted
+     *
+     * @return boolean 
+     */
+    public function getIsAccepted()
+    {
+        return $this->isAccepted;
+    }
+    
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     * @return Mems
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }
