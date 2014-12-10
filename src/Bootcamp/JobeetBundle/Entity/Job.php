@@ -137,7 +137,7 @@ class Job
      *
      * @ORM\Column(name="is_accepted", type="boolean")
      */
-    private $isAccepted = false;
+    private $isAccepted = true;
     
     public function __construct() 
     {

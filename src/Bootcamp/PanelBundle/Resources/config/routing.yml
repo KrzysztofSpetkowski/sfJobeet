@@ -1,7 +1,7 @@
 bootcamp_panel_homepage:
     path:     /
     defaults: { _controller: BootcampPanelBundle:Default:index }
-
+   
 bootcamp_panel_list:
     path:     /list
     defaults: { _controller: BootcampPanelBundle:Job:list, page: 1 }
