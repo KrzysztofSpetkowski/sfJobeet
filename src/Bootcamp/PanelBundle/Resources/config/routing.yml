@@ -20,5 +20,5 @@ bootcamp_panel_delete:
     defaults: { _controller: BootcampPanelBundle:Job:delete }
     
 bootcamp_panel_details:
-    path:     /details/{id}
+    path:     /details/{slug}
     defaults: { _controller: BootcampPanelBundle:Job:details }

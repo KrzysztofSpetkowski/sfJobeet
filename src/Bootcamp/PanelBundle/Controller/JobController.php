@@ -112,31 +112,31 @@ class JobController extends Controller
                'form' => $form->createView()
             ));
         }
-    public function detailsAction($id)
+    public function detailsAction($slug=1)
    {
         $request = $this->getRequest();
     	
     	$job = $this->getDoctrine()
     	->getRepository('BootcampJobeetBundle:Job')
-    	->find($id);
+    	->findOneBy([
+                'slug' => $slug
+            ]);;
     	
-    	if (!$job) 
-            {
-        
-    		$this->get('session')->getFlashBag()
-    		->add('notice', 'Brak ofert');
-            }
-    		return $this->redirect($this->generateUrl('bootcamp_panel_list'));
+    	
+    		return $this->redirect($this->generateUrl('bootcamp_panel_details', array(
+                    'slug' => $job->getSlug())
+                ));
     			
     
     
     {
-    	$form =$this->createForm(new JobType(), $job, []);
+    	$form =$this->createForm(new JobType(), $job);
     	$form->handleRequest($request);
     } 
 
     return $this->render('BootcampPanelBundle:Job:details.html.twig', array(
-              'form' => $form->createView()
+            'job' =>$job, 
+            'form' => $form->createView()
             ));
  
     }

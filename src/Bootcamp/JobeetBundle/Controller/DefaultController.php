@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($pages=1)
+    public function indexAction($page=1)
     {
      
         $jobs = $this->getDoctrine()
@@ -17,7 +17,7 @@ class DefaultController extends Controller
     	$paginator  = $this->get('knp_paginator');
         $pages = $paginator->paginate(
             $jobs,
-            $pages,
+            $page,
             5
             );
     	
