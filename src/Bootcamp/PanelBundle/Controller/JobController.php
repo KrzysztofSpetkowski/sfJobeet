@@ -20,7 +20,7 @@ class JobController extends Controller
         $pages = $paginator->paginate(
             $jobs,
             $page,
-           5
+            5
                 );
                 
         return $this->render('BootcampPanelBundle:Job:list.html.twig', array(
@@ -99,7 +99,7 @@ class JobController extends Controller
     	$form->handleRequest($request);
     	
     	if($form->isValid()) {
-    		$product = $form->getData();
+    		$job = $form->getData();
     		$em = $this->getDoctrine()->getManager();
     		$em->flush();
     		$this->get('session')->getFlashBag()->add('notice', "Oferta zostala zmieniona");
@@ -112,7 +112,7 @@ class JobController extends Controller
                'form' => $form->createView()
             ));
         }
-    public function detailsAction($slug=1)
+    public function detailsAction($slug)
    {
         $request = $this->getRequest();
     	
@@ -122,7 +122,10 @@ class JobController extends Controller
                 'slug' => $slug
             ]);;
     	
-    	
+    	  
+        if (!$job) {
+            throw $this->createNotFoundException('Oferta nie istnieje');
+        }
     		return $this->redirect($this->generateUrl('bootcamp_panel_details', array(
                     'slug' => $job->getSlug())
                 ));

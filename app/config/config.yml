@@ -83,6 +83,14 @@ stof_doctrine_extensions:
         default:
             sluggable: true
             
+            
+admingenerator_generator:
+    # choose  and enable at least one
+    base_admin_template: AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig
+    use_propel:           true
+    use_doctrine_orm:     true
+    use_doctrine_odm:     false
+            
 knp_paginator:
     page_range: 5
     default_options:
@@ -93,7 +101,7 @@ knp_paginator:
 vich_uploader:
     db_driver: orm
     mappings:
-        mems_image:
+        job_image:
             uri_prefix:         uploads/logo
             upload_destination: %kernel.root_dir%/../web/uploads/logo
             inject_on_load:     false
