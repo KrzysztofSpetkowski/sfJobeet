@@ -3,7 +3,7 @@ bootcamp_panel_homepage:
     defaults: { _controller: BootcampPanelBundle:Default:index }
    
 bootcamp_panel_list:
-    path:     /list
+    path:     /list/{page}
     defaults: { _controller: BootcampPanelBundle:Job:list, page: 1 }
     requirements: { page: \d+ }
    
