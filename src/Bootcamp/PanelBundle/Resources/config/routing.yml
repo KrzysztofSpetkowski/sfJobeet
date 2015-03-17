@@ -22,3 +22,7 @@ bootcamp_panel_delete:
 bootcamp_panel_details:
     path:     /details/{slug}
     defaults: { _controller: BootcampPanelBundle:Job:details }
+    
+bootcamp_panel_regulations:
+    path:     /regulations
+    defaults: { _controller: BootcampPanelBundle:Default:regulations }

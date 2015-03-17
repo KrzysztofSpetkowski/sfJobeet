@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('BootcampPanelBundle:Default:index.html.twig', array());
     }
+    public function regulationsAction()
+    {
+        return $this->render('BootcampPanelBundle:Default:regulations.html.twig', array());
+    }
 }

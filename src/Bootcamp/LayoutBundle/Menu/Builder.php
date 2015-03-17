@@ -19,7 +19,7 @@ class Builder extends ContainerAware
            ('uri' => '#' )
                );
         $menu->addChild('Regulamin', array
-           ('uri' => '#' )
+           ('route' => 'bootcamp_panel_regulations' )
                );
    
     return $menu;
