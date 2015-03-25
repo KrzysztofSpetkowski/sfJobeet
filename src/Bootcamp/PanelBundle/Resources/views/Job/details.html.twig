@@ -5,11 +5,11 @@
 {% block body %}
 <h1>{{ block('title') }}</h1>
   <div>
-  <p>{{ job.title }}</p>
+  <p>{{ job.slug }}</p>
 		
-			<p>{{ job.title }}</p>
+			<p>{{ job.slug }}</p>
 			
-			<img src="{{ asset('uploads/logo/') }}" alt ="{{ job.title }}">
+			<img src="{{ asset('uploads/logo/') }}" alt ="{{ job.slug }}">
 			<p>Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</p>
 </div>
 {% endblock %}

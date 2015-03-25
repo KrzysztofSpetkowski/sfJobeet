@@ -1,8 +1,0 @@
-parameters:
-#    bootcamp_user.example.class: Bootcamp\UserBundle\Example
-
-services:
- bootcamp_user_registration:
-        class: Bootcamp\UserBundle\Form\Type\RegistrationFormType
-        tags:
-            - { name: form.type, alias: bootcamp_user_registration }
