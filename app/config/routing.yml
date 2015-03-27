@@ -1,12 +1,3 @@
-bootcamp_user:
-    resource: "@BootcampUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
-BootcampAdminBundle_admin_bootcamp_admin_bundle_Bootcamp:
-    resource: "@BootcampAdminBundle/Controller/Bootcamp/"
-    type:     admingenerator
-    prefix:   /admin/bootcamp_admin_bundle/Bootcamp
-
 bootcamp_admin:
     resource: "@BootcampAdminBundle/Resources/config/routing.yml"
     prefix:   /admin

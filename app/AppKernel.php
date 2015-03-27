@@ -27,9 +27,9 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Vich\UploaderBundle\VichUploaderBundle,
-            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
+//            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new Bootcamp\UserBundle\BootcampUserBundle(),
+    
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

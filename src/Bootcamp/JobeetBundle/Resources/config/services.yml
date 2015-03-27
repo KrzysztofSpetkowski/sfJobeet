@@ -5,3 +5,7 @@ services:
 #    bootcamp_jobeet.example:
 #        class: %bootcamp_jobeet.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+    bootcamp_user.registration.form.type:
+        class: Bootcamp\JobeetBundle\Form\Type\RegistrationFormType
+        tags:
+            - { name: form.type, alias: bootcamp_user_registration }

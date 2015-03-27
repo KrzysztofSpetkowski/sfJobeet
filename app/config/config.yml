@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ BootcampLayoutBundle, BootcampUserBundle]
+    bundles:        [ BootcampLayoutBundle, BootcampJobeetBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -74,7 +74,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: Bootcamp\UserBundle\Entity\User
+    user_class: Bootcamp\JobeetBundle\Entity\User
     registration:
         form:
             type: bootcamp_user_registration
@@ -85,14 +85,6 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
-            
-            
-admingenerator_generator:
-    # choose  and enable at least one
-    base_admin_template: AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig
-    use_propel:           true
-    use_doctrine_orm:     true
-    use_doctrine_odm:     false
             
 knp_paginator:
     page_range: 5

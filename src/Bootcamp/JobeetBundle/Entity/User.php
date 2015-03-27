@@ -29,6 +29,22 @@ class User extends BaseUser
      */
     protected $jobs;
     
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+    
+    protected $firstName;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     */
+    
+    protected $lastName;
+
+
     public function __construct() 
     {
         parent::__construct();
@@ -77,5 +93,53 @@ class User extends BaseUser
     public function getJobs()
     {
         return $this->jobs;
+    }
+    
+     /**
+     * Set firstName
+     *
+     * @param string $firstName
+     * @return User
+     */
+    
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+        return $this;
+    }
+    
+    /**
+     * Get firstName
+     *
+     * @return string 
+     */
+    
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+    
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     * @return User
+     */
+    
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+        return $this;
+    }
+    
+    /**
+     * Get lastName
+     *
+     * @return string 
+     */
+    
+    public function getLastName()
+    {
+        return $this->lastName;
     }
 }
