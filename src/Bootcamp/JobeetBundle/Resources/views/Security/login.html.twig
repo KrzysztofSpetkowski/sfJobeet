@@ -27,19 +27,23 @@
     </label>
     
     <button class="btn btn-lg btn-primary btn-block" type="submit" id="_submit" name="_submit" >{{ 'security.login.submit'|trans }}</button>
-  </form>
-   </div>
+    </form>
+    </div>
   
-   <div class="col-lg-4">
+    <div class="col-lg-4">
+                    
+    <p>
                     <div class="sidebar-module">
                         <h4>Nie masz jeszcze konta?</h4>
                         <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-lg btn-danger btn-block">
                             Zarejestruj się
                         </button></a><br/>
                     </div>
-   </div>
+    </p>
+    </div>
         </div>
     </div>
-</div>  
-
+                        
+    
+</form>
 {% endblock body %}
