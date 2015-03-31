@@ -56,11 +56,11 @@ class Job
      *
      * @ORM\Column(name="type", type="smallint")
      * 
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Proszę wprowadzić rodzaj umowy")
      */
     private $type;
 /**
-     * @Vich\UploadableField(mapping="logo_image", fileNameProperty="logo")
+     * @Vich\UploadableField(mapping="logo_image", fileNameProperty="logo", nullable=true)
      *
      * @var File $logo
      * 
@@ -79,7 +79,7 @@ class Job
      *
      * @ORM\Column(name="position", type="string", length=255)
      * 
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Proszę wprowadzić miejscowość")
      */
     private $position;
 
@@ -142,6 +142,7 @@ class Job
     public function __construct() 
     {
         $this->categories =  new ArrayCollection();
+        $this->createdAt = new \DateTime('now');
     }
 
     /**

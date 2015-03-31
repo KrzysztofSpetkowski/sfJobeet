@@ -1,15 +1,16 @@
 {% extends "BootcampLayoutBundle::layout.html.twig" %}
 
-{% block title %}BootcampPanelBundle:Job:details{% endblock %}
+{% block title %}Szczegóły ogłoszenia:
+    {{ job.slug }}
+{% endblock %}
 
 {% block body %}
-<h1>{{ block('title') }}</h1>
-  <div>
-  <p>{{ job.slug }}</p>
-		
-			<p>{{ job.slug }}</p>
-			
-			<img src="{{ asset('uploads/logo/') }}" alt ="{{ job.slug }}">
-			<p>Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</p>
-</div>
+<h3>{{ block('title') }}</h3>
+    <div>
+      <p>
+          {{ job.description }}
+      </p>
+    <p>Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</p>
+<a href="{{ path('bootcamp_panel_new') }}" class="btn btn-primary pull-center">Aplikuj</a>
+    </div>
 {% endblock %}

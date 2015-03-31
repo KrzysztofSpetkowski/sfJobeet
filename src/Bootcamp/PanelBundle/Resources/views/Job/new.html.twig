@@ -1,10 +1,21 @@
 {% extends "BootcampLayoutBundle::layout.html.twig" %}
 
-{% block title %}BootcampPanelBundle:Job:new{% endblock %}
+{#{% block title %}Jobeet-Dodaj nową ofertę{% endblock %}#}
+{% block stylesheets %}
+  {{ parent() }}
+  {% stylesheets
+                  '@BootcampLayoutBundle/Resources/public/css/style.css'
+            %}
+            <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
+            {% endstylesheets %}
+{% endblock %}
+
+
 
 {% block body %}
-<h1>Dodaj oferty pracy</h1>
-
-{{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
-
+    <div class="container">
+    <h1 class="form-signin-heading">Dodaj ofertę:</h1>
+    
+{{ form(form) }}   
+    </div>
 {% endblock %}
