@@ -16,7 +16,7 @@ class Builder extends ContainerAware
            ('route' => 'bootcamp_jobeet_homepage')
                );
         $menu->addChild('Ogłoszenia', array
-           ('uri' => '#' )
+           ('route' => 'bootcamp_jobeet_deals' )
                );
         $menu->addChild('Regulamin', array
            ('route' => 'bootcamp_panel_regulations' )

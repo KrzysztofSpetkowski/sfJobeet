@@ -1,3 +1,8 @@
 bootcamp_jobeet_homepage:
     path:     /
     defaults: { _controller: BootcampJobeetBundle:Default:index }
+    
+bootcamp_jobeet_deals:
+    path:     /deals/{page}
+    defaults: { _controller: BootcampJobeetBundle:Default:deals, page: 1 }
+    requirements: { page: \d+ }

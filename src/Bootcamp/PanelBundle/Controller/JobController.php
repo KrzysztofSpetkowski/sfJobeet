@@ -13,7 +13,7 @@ class JobController extends Controller
         $user = $this->getUser();
         $jobs = $this->getDoctrine()->getRepository('BootcampJobeetBundle:Job')
             ->findBy(array(
-               'user'   => $user
+               'user'   => $user,
             ));
         
         $paginator  = $this->get('knp_paginator');
@@ -53,7 +53,9 @@ class JobController extends Controller
             
             return $this->redirect($this->generateUrl('bootcamp_panel_list'));
         }
-        
+        else {
+            
+        }
         return $this->render('BootcampPanelBundle:Job:new.html.twig', array(
            'form'   => $form->createView()
         ));
