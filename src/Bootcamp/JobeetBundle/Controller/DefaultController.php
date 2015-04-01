@@ -4,24 +4,24 @@ namespace Bootcamp\JobeetBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
-{
-  
-   public function indexAction(Job $job)
-{
-    $em    = $this->get('doctrine.orm.entity_manager');
-    $dql   = "SELECT createdAT FROM BootcampJobeetBundle:Job createdAT";
-    $query = $em->createQuery($dql);
+class DefaultController extends Controller 
 
-    $paginator  = $this->get('knp_paginator');
-    $pagination = $paginator->paginate(
-        $query,
-        $job->query->get('page', 1)/*page number*/,
-        10/*limit per page*/
-    );
-
+{
+   public function indexAction($page=1)
+{
+//    $em    = $this->get('doctrine.orm.entity_manager');
+//    $sql   = "SELECT created_at FROM Job ";
+//    $query = $em->createQuery($sql);
+//
+//    $paginator  = $this->get('knp_paginator');
+//    $pagination = $paginator->paginate(
+//        $query,
+//        $job,
+//        5/*limit per page*/
+//    );
+        $sql = "SELECT * FROM Job WHERE created_at";
     // parameters to template
-    return $this->render('BootcampJobeetBundle:Default:index.html.twig', array('pagination' => $pagination));
+    return $this->render('BootcampJobeetBundle:Default:index.html.twig', array('page' => $page));
 }
     public function dealsAction($page=1)
         {
