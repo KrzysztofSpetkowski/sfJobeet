@@ -29,6 +29,8 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle,
 //            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            
     
         );
 

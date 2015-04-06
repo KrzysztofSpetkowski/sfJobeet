@@ -13,8 +13,8 @@ params:
 builders:
     list:
         params:
-            title: List for AdminBundle
-            display: ~
+            title: Lista użytkowników
+            display: [ tel, city, registered, username, firstName, lastName, enabled, lastLogin ]
             actions:
                 new: ~
             object_actions:

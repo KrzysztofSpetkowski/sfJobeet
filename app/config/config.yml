@@ -103,3 +103,30 @@ vich_uploader:
             delete_on_update:   true
             delete_on_remove:   true
             namer:              vich_uploader.namer_uniqid
+            
+easy_admin:
+    entities:
+        Użytkownicy:
+            class: Bootcamp\JobeetBundle\Entity\User
+            list:
+                fields: ['id', 'username', 'email', 'enabled', 'locked', 'lastLogin']
+            edit:
+                fields: 
+                - {property: 'firstName', label: 'Imię i nazwisko'}
+                - email
+                - enabled
+                - locked
+            new:
+                fields: 
+                - {property: 'firstName', label: 'Imię i nazwisko'} 
+                - email
+                - {property: 'password', label: 'Hasło'}
+                - enabled
+                - locked
+            form:
+                fields:
+                    - 'id'
+                    - { property: 'email', type: 'email', label: 'Contact' }
+        
+
+            
