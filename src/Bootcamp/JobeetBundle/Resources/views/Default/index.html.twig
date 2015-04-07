@@ -21,33 +21,32 @@
         <p><a href="{{ path('fos_user_security_login') }}" ></a></p>
         
     {% endif %}
-{#<table class="table table-hover">
+<table class="table table-hover">
     <thead>
         <tr>
-            <th>Nazwa firma</th>
+            <th>Nazwa firmy</th>
             <th>Stanowisko</th>
             <th>Lokalizacja</th>
             <th>E-mail</th>
-            <th>Akcje</th>
         </tr>
     </thead>
     <tbody>
-        {% for job in job %}
+        {% for job in jobs %}
         <tr>
             <td>{{ job.campanyName }}</td>
             <td>{{ job.position }}</td>
             <td>{{ job.location }}</td>
             <td>{{ job.email }}</td>
-            <td>#}
-             {#   <a href="{{ path('bootcamp_panel_details', {'id': job.id}) }}" >Szczegóły</a> &nbsp;#}
-{#            </td>
+            <td>
+             <a href="{{ path('bootcamp_panel_details', {'id': job.id}) }}" >Szczegóły</a> &nbsp;
+            </td>
         </tr>
-    {% else %}#}
+    {% else %}
         <tr>
           <td colspan="4">Brak ofert pracy!</td>
         </tr>
-       {# {% endfor %} 
+       {% endfor %} 
     </tbody>
-</table>#}
+</table>
 {# {{ knp_pagination_render(pagination) }}#}
 {% endblock %}
