@@ -1,0 +1,12 @@
+{% extends 'BootcampLayoutBundle::layout.html.twig' %}
+
+{% block title %}Jobeet-wyszukaj{% endblock %}
+{% block body %}
+<h1>Welcome to the :search page</h1>
+{% for job in jobs %}
+    {{ job.position }} &nbsp;
+    {% else %}
+        brak ogłoszeń
+        
+       {% endfor %}
+{% endblock %}

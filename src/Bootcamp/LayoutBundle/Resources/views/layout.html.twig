@@ -45,16 +45,19 @@
                 {{ knp_menu_render('BootcampLayoutBundle:Builder:mainMenu') }}
                 
            </div> 
-         
+        <form  class="navbar-form navbar-left" method="post" action="{{ path('bootcamp_jobeet_search') }}" > 
+        <input class="form-control" id="position" name="position" placeholder="wpisz czego szukasz" type="text" />
+        <button type="submit" id="submitButton" class="btn btn-primary">Wyszukaj</button> 
+        </form> 
           </div>
      
           {% for flashMessage in app.session.flashbag.get('notice') %}
-              
+            
             <div class="alert alert-success" role="alert">
                 {{ flashMessage }}
   
             </div>
-        {% endfor %}
+      {% endfor %}
     
         {% block body %}{% endblock %}
     

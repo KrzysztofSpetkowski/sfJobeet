@@ -6,3 +6,7 @@ bootcamp_jobeet_deals:
     path:     /deals/{page}
     defaults: { _controller: BootcampJobeetBundle:Default:deals, page: 1 }
     requirements: { page: \d+ }
+    
+bootcamp_jobeet_search:
+    path:     /wyszukaj
+    defaults: { _controller: BootcampJobeetBundle:Job:search }

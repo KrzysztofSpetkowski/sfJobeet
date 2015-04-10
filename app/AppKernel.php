@@ -28,7 +28,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Vich\UploaderBundle\VichUploaderBundle,
 //            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+//            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             
     

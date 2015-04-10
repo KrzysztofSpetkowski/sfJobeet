@@ -47,4 +47,17 @@ class JobController extends Controller
             'entity'      => $entity,
         ));
     }
+    public function searchAction()
+    {
+        $search= $_POST['position'];
+        $searchrepository=$this->getDoctrine()->getRepository('BootcampJobeetBundle:Job');
+        $query = $searchrepository->createQueryBuilder('p')
+            ->where('p.position LIKE :position')
+            ->setParameter('position', "%$search%")
+            ->getQuery();
+        $job = $query->getResult();
+        return $this->render('BootcampJobeetBundle:Job:search.html.twig', array(
+                'jobs' => $job,
+        )); 
+    }
 }
