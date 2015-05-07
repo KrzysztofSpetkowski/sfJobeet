@@ -10,3 +10,7 @@ bootcamp_jobeet_deals:
 bootcamp_jobeet_search:
     path:     /wyszukaj
     defaults: { _controller: BootcampJobeetBundle:Job:search }
+    
+bootcamp_jobeet_apply:
+    path:     /aplikuj
+    defaults: { _controller: BootcampJobeetBundle:Apply:apply }

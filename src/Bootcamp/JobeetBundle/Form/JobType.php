@@ -45,7 +45,7 @@ class JobType extends AbstractType
                 )
             ))
             ->add('description', 'text', array(
-                'label' => 'Opis stanowiska:',
+                'label' => 'Opis:(prezentacja firmy, wymagania, co oferuje)',
                 'attr' => array(
                     'class' => 'form-control',
                 )
@@ -62,20 +62,20 @@ class JobType extends AbstractType
                     'class' => 'form-control',
                 )
             ))
-            ->add('categories', 'text', array(
-                'label' => 'Kategoria:',
-//                'choices' => array(
-//                    1   => "IT- Programowanie",
-//                    2   => "Budownictwo",
-//                    3   => "Handel",
-//                    4   => "Usługi",
-//                    5   => "Praca fizyczna",
-//                    6   => "Transport",
-                'attr' => array(
-                    'class' => 'form-control',
-                )
-//            )
-                    ))   
+//            ->add('categories', 'text', array(
+//                'label' => 'Kategoria:',
+////                'choices' => array(
+////                    1   => "IT- Programowanie",
+////                    2   => "Budownictwo",
+////                    3   => "Handel",
+////                    4   => "Usługi",
+////                    5   => "Praca fizyczna",
+////                    6   => "Transport",
+//                'attr' => array(
+////                    'class' => 'form-control',
+//                )
+////            )
+//                    ))   
             ->add('submit', 'submit', array('label' => 'dodaj oferte'))
                 
         ;

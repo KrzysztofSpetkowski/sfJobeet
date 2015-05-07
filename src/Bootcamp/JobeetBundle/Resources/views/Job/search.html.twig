@@ -2,9 +2,13 @@
 
 {% block title %}Jobeet-wyszukaj{% endblock %}
 {% block body %}
-<h1>Welcome to the :search page</h1>
+    </br>
+    </br>
+<h2>Wyniki Twojego wyszukiwania:</h2>
 {% for job in jobs %}
-    {{ job.position }} &nbsp;
+    <div>
+        {{ job.position }}<br>
+    </div>
     {% else %}
         brak ogłoszeń
         

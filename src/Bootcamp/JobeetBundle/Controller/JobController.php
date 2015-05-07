@@ -14,10 +14,8 @@ use Bootcamp\JobeetBundle\Entity\Job;
 class JobController extends Controller
 {
 
-    /**
-     * Lists all Job entities.
-     *
-     */
+    // Lists all Job entities.
+     
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -29,10 +27,9 @@ class JobController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a Job entity.
-     *
-     */
+  
+     // Finds and displays a Job entity.
+    
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -47,6 +44,9 @@ class JobController extends Controller
             'entity'      => $entity,
         ));
     }
+    
+    // Finds jobs
+    
     public function searchAction()
     {
         $search= $_POST['position'];

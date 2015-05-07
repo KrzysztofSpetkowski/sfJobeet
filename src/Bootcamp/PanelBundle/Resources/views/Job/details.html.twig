@@ -1,16 +1,24 @@
 {% extends "BootcampLayoutBundle::layout.html.twig" %}
-
-{% block title %}Szczegóły ogłoszenia:
-    {{ job.slug }}
-{% endblock %}
+{% block title %}Jobeet-Szczegóły oferty{% endblock %}
 
 {% block body %}
-<h3>{{ block('title') }}</h3>
+    </br>
+    </br>
+    <center>
+        <h2>Szczegóły oferty:</h2>
+    </center>
+    </br>
     <div>
-      <p>
-          {{ job.description }}
-      </p>
-    <p>Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</p>
-<a href="{{ path('bootcamp_panel_new') }}" class="btn btn-primary pull-center">Aplikuj</a>
+        <p>
+            <h3>{{ job.slug }}</h3>
+        </p>
+        <p>
+            <h3>{{ job.description }}</h3>
+        </p>
+        </br>
+        <p>
+            <h4> Dodany , dnia {{ job.createdAt|date('y-m-d H:i:s') }}</h4>
+        </p>
+            <a href="{{ path('bootcamp_jobeet_apply') }}" class="btn btn-lg btn-danger btn-block">Aplikuj</a>
     </div>
 {% endblock %}

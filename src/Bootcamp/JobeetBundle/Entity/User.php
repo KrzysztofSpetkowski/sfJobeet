@@ -23,11 +23,10 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="Bootcamp\JobeetBundle\Entity\Job", mappedBy="user")
-     *
+     * @ORM\OneToMany(targetEntity="Bootcamp\JobeetBundle\Entity\Apply", mappedBy="createdBy")
      * @var ArrayCollection
      */
-    protected $jobs;
+    private $applications;
     
     
     /**
@@ -61,7 +60,28 @@ class User extends BaseUser
     {
         return $this->id;
     }
-
+    
+    /**
+     * Set applications
+     *
+     * @param string $applications
+     * @return User
+     */
+    
+    public function setApplications($applications)
+    {
+        $this->applications = $applications;
+        return $this;
+    }
+    /**
+     * Get applications
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getApplications()
+    {
+        return $this->applications;
+    }
     /**
      * Add jobs
      *
