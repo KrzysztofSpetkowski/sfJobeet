@@ -51,18 +51,19 @@
         </form> 
           </div>
      
-          {% for flashMessage in app.session.flashbag.get('notice') %}
+            {% for flashMessage in app.session.flashbag.get('notice') %}
             
             <div class="alert alert-success" role="alert">
                 {{ flashMessage }}
   
             </div>
-      {% endfor %}
+        {% endfor %}
     
         {% block body %}{% endblock %}
-    
+        
+
           <!-- Site footer -->
-          <div class="footer">
+            <div class="footer">
             <p>&copy; Company 2015</p>
           </div>
     

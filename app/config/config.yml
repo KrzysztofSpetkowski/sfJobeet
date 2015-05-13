@@ -126,7 +126,20 @@ easy_admin:
             form:
                 fields:
                     - 'id'
-                    - { property: 'email', type: 'email', label: 'Contact' }
-        
 
-            
+hwi_oauth:
+    connect:
+        account_connector: my_user_provider
+    firewall_name: main
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook: facebookId
+    resource_owners:       
+        facebook:
+            type: facebook
+            client_id:           "%facebook_client_id%"
+            client_secret:       "%facebook_client_secret%"
+            scope:         "email"
+            options:
+                display: popup 

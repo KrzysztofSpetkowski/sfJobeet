@@ -30,6 +30,7 @@ class AppKernel extends Kernel
 //            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
 //            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             
     
         );
