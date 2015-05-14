@@ -33,17 +33,23 @@
     <div class="col-lg-4">
                     
     <p>
-                    <div class="sidebar-module">
-                        <h4>Nie masz jeszcze konta?</h4>
-                        <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-lg btn-danger btn-block">
-                            Zarejestruj się
-                        </button></a><br/>
-                    </div>
+    <div class="sidebar-module">
+        <h4>Nie masz jeszcze konta?</h4>
+        <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-lg btn-danger btn-block">
+            Zarejestruj się
+        </button></a><br/>
+        
+        <p class="pull-right">
+         <h4>Zaloguj sie przez facebook</h4>
+            {% for owner in hwi_oauth_resource_owners() %}
+                <a href="{{ hwi_oauth_login_url(owner) }}">
+                    <img src="{{ asset('images/' ~ owner ~ '.png') }}" alt="{{ owner }}" width="80">
+                </a>
+        </p>
+            {% endfor %}
+    </div>
     </p>
     </div>
         </div>
     </div>
-                        
-    
-</form>
 {% endblock body %}

@@ -22,20 +22,22 @@
             <p class="pull-right">
                 {% if app.user %}
                   
-                  Witaj {{ app.user.username }}, 
-                  {% if is_granted("ROLE_USER") %}
-                    <a href="{{ path('bootcamp_panel_homepage') }}" >panel użytkownika</a>
-                  {% endif %}
-                  
-                  {% if is_granted("ROLE_ADMIN") %}
-                    , <a href="{{ path('bootcamp_admin_homepage') }}" >panel administratora</a>
-                  {% endif %}
-                  
-                  <a href="{{ path('fos_user_security_logout') }}">[wyloguj]</a>
+                Witaj {{ app.user.username }}, 
+                {% if is_granted("ROLE_USER") %}
+                  <a href="{{ path('bootcamp_panel_homepage') }}" >panel użytkownika</a>
+                {% endif %}
+
+                {% if is_granted("ROLE_ADMIN") %}
+                  , <a href="{{ path('bootcamp_admin_homepage') }}" >panel administratora</a>
+                {% endif %}
+
+                <a href="{{ path('fos_user_security_logout') }}">[wyloguj]</a>
                
                 {% else %}
                      <a href="{{ path('fos_user_security_login') }}">zaloguj się</a>
+              
                 {% endif %}
+           
             </p>
     
             <h3 class="text-muted">Jobeet - Portal z ogłoszeniami</h3>
