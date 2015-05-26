@@ -75,7 +75,12 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Bootcamp\JobeetBundle\Entity\User
+    profile:
+        form:
+            type: bootcamp_user_profile
     registration:
+        confirmation:
+            enabled: true
         form:
             type: bootcamp_user_registration
     

@@ -43,11 +43,11 @@ class User extends BaseUser
     
     protected $lastName;
         
-    /** @ORM\Column(name="facebook_id", type="string", length=255, nullable=true) */
-    protected $facebook_id;
+    /** @ORM\Column(name="facebookId", type="string", length=255, nullable=true) */
+    protected $facebookId;
  
-    /** @ORM\Column(name="facebook_access_token", type="string", length=255, nullable=true) */
-    protected $facebook_access_token;
+    /** @ORM\Column(name="facebookAccessToken", type="string", length=255, nullable=true) */
+    protected $facebookAccessToken;
 
 
     public function __construct() 
@@ -169,48 +169,48 @@ class User extends BaseUser
         return $this->lastName;
     }
     /**
-     * Set facebook_id
+     * Set facebookId
      *
      * @param string $facebookId
      * @return User
      */
     public function setFacebookId($facebookId)
     {
-        $this->facebook_id = $facebookId;
+        $this->facebookId = $facebookId;
  
         return $this;
     }
  
     /**
-     * Get facebook_id
+     * Get facebookId
      *
      * @return string 
      */
     public function getFacebookId()
     {
-        return $this->facebook_id;
+        return $this->facebookId;
     }
  
     /**
-     * Set facebook_access_token
+     * Set facebookAccessToken
      *
      * @param string $facebookAccessToken
      * @return User
      */
     public function setFacebookAccessToken($facebookAccessToken)
     {
-        $this->facebook_access_token = $facebookAccessToken;
+        $this->facebookAccessToken = $facebookAccessToken;
  
         return $this;
     }
  
     /**
-     * Get facebook_access_token
+     * Get facebookAccessToken
      *
      * @return string 
      */
     public function getFacebookAccessToken()
     {
-        return $this->facebook_access_token;
+        return $this->facebookAccessToken;
     }
 }

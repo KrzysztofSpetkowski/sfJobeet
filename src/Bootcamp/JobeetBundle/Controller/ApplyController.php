@@ -21,7 +21,7 @@ class ApplyController extends Controller
     {
         $user = $this->getUser();
         $apply = new Apply($request);
-        $apply->setCreatedBy($user);
+        $apply->setCreatedAt($user);
         
         $form = $this->createForm(new ApplyType(), $apply);
         $form->handleRequest($request);

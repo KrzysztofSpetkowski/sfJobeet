@@ -1299,33 +1299,32 @@
         },
         {
             "name": "javiereguiluz/easyadmin-bundle",
-            "version": "v1.4.0",
+            "version": "v1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/javiereguiluz/EasyAdminBundle.git",
-                "reference": "c2aaf221f33a38be292f02bfc2f10c9ba357f477"
+                "reference": "46223f935fee72f4721ede9fc3c7a8390bb7f167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/javiereguiluz/EasyAdminBundle/zipball/c2aaf221f33a38be292f02bfc2f10c9ba357f477",
-                "reference": "c2aaf221f33a38be292f02bfc2f10c9ba357f477",
+                "url": "https://api.github.com/repos/javiereguiluz/EasyAdminBundle/zipball/46223f935fee72f4721ede9fc3c7a8390bb7f167",
+                "reference": "46223f935fee72f4721ede9fc3c7a8390bb7f167",
                 "shasum": ""
             },
             "require": {
+                "doctrine/doctrine-bundle": "~1.2",
                 "doctrine/orm": "~2.3",
-                "pagerfanta/pagerfanta": "~1.0",
+                "pagerfanta/pagerfanta": "~1.0,>=1.0.1",
                 "php": ">=5.3.0",
-                "sensio/framework-extra-bundle": "~2.3|~3.0",
-                "symfony/config": "~2.3",
-                "symfony/dependency-injection": "~2.3",
-                "symfony/doctrine-bridge": "~2.3",
-                "symfony/form": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/http-foundation": "~2.3",
-                "symfony/http-kernel": "~2.3",
-                "symfony/routing": "~2.3",
-                "symfony/yaml": "~2.3",
-                "twig/twig": "~1.0"
+                "sensio/distribution-bundle": "~2.3|~3.0",
+                "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
+                "symfony/symfony": "~2.3",
+                "twig/extensions": "~1.0",
+                "twig/twig": "~1.12,>=1.12.2"
+            },
+            "require-dev": {
+                "doctrine/doctrine-fixtures-bundle": "~2.2",
+                "phpunit/phpunit": "~4.4"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -1354,7 +1353,7 @@
                 "backend",
                 "generator"
             ],
-            "time": "2015-05-01 10:10:49"
+            "time": "2015-05-26 06:51:34"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1881,17 +1880,17 @@
         },
         {
             "name": "lexik/form-filter-bundle",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "target-dir": "Lexik/Bundle/FormFilterBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lexik/LexikFormFilterBundle.git",
-                "reference": "c97909c7204458ad514b7335a06f774a7d26f5f6"
+                "reference": "cd74e78fab839cdb00998359f00e7ee980fdba80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikFormFilterBundle/zipball/c97909c7204458ad514b7335a06f774a7d26f5f6",
-                "reference": "c97909c7204458ad514b7335a06f774a7d26f5f6",
+                "url": "https://api.github.com/repos/lexik/LexikFormFilterBundle/zipball/cd74e78fab839cdb00998359f00e7ee980fdba80",
+                "reference": "cd74e78fab839cdb00998359f00e7ee980fdba80",
                 "shasum": ""
             },
             "require": {
@@ -1937,7 +1936,7 @@
                 "filter",
                 "form"
             ],
-            "time": "2014-12-15 09:06:44"
+            "time": "2015-05-11 15:04:07"
         },
         {
             "name": "monolog/monolog",
@@ -2119,17 +2118,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v3.0.22",
+            "version": "v3.0.24",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "0fe4ec86db57c232becb694e01cdabe3c4d9af7c"
+                "reference": "79b820aee1f1daeb2717fa9471ee19275cc1d638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/0fe4ec86db57c232becb694e01cdabe3c4d9af7c",
-                "reference": "0fe4ec86db57c232becb694e01cdabe3c4d9af7c",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/79b820aee1f1daeb2717fa9471ee19275cc1d638",
+                "reference": "79b820aee1f1daeb2717fa9471ee19275cc1d638",
                 "shasum": ""
             },
             "require": {
@@ -2175,7 +2174,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-05-02 16:23:08"
+            "time": "2015-05-16 12:57:08"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2284,16 +2283,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc"
+                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cecb1397087dc9c733796eda6e9d121336039cdc",
-                "reference": "cecb1397087dc9c733796eda6e9d121336039cdc",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/cde03c48d490d805ef1349e5108f8b3085981ead",
+                "reference": "cde03c48d490d805ef1349e5108f8b3085981ead",
                 "shasum": ""
             },
             "require": {
@@ -2325,7 +2324,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2015-04-21 07:52:05"
+            "time": "2015-05-22 14:21:04"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
