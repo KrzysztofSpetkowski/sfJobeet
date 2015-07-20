@@ -29,7 +29,8 @@
         "doctrine/migrations": "1.0.*@dev",
         "doctrine/doctrine-migrations-bundle": "2.1.*@dev",
         "javiereguiluz/easyadmin-bundle": "~1.1",
-        "hwi/oauth-bundle": "0.4.*@dev"
+        "hwi/oauth-bundle": "0.4.*@dev",
+        "swiftmailer/swiftmailer": "@stable"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

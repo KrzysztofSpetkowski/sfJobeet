@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * User
  *
- * @ORM\Table(name="user")
+ * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="Bootcamp\JobeetBundle\Entity\UserRepository")
  */
 class User extends BaseUser
